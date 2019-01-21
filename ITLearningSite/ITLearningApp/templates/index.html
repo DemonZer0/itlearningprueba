@@ -1,0 +1,597 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>IT Learning</title>
+    <meta name="description" content="Free Bootstrap 4 Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+    <!-- <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400'%}" >-->
+    
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/flaticon.css'%}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/font-awesome.min.css'%}">
+  <!--<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}">-->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/helpers.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mobile-1.4.5.css'%}">
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <!--<script src="{% static " https://maps.googleapis.com/maps/api/js?key=AIzaSyAFAA7NONEuKWxK26qid_3uRs-CjQz5iSI" %}"></script> -->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+    <style type="text/css">
+    footer{
+
+        background-color: #7B8891 !important;
+    }
+
+    #gris{
+
+        color: white;
+        text-align: justify;
+        padding-top: 5px;
+        padding-right: 50px;
+        margin-left: 50px;
+        padding-top: 20px;
+        margin-bottom: 25px;
+
+    }
+
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+
+    <!-- SECCIÓN DEL MENÚ -->
+    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+        <div class="container">
+            <!--<img src="{% static "my_app/example.jpg" %}" alt="My image">-->
+            <a class="navbar-brand"><img src="{% static 'images/logo.png' %}" height="70"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span><i class="ion-navicon"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="probootstrap-navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" align="center" href="#seccion-oferta">Oferta de </br> Capacitación</a></li>
+                <li class="nav-item"><a class="nav-link" align="center" href="#seccion-partners">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" align="center" href="#seccion-enfoque">Enfoque</a></li>
+                <li class="nav-item"><a class="nav-link" align="center" href="#seccion-testimonios">Testimonios</a></li>
+                <li class="nav-item"><a class="nav-link" align="center" href="#seccion-contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- FIN DE LA SECCIÓN DEL MENÚ -->
+
+<!-- SECCIÓN DEL VIDEO -->
+<section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" id="seccion-video">
+    <div class="row align-items-center center-content-end">
+        <div class="col-md-12 order-md-1 text-center">
+            <video playsinline autoplay loop muted src="{% static 'videos/Home.mp4' %}" id="bgVideo" poster="{% static 'images/foto_portada.jpg' %}"></video>
+            <div style="margin-top: 30%"></div>
+            <div class="col-lg-10 col-md-12 col-sm-3" style="background-color: rgba(169,169,169,.2)">
+                <h2 style="text-align: left; font-size: 56px" class="heading ">¡Tú pones la actitud...</h2>
+                <h2 style="text-align: right; font-size: 56px" class="heading ">...nosotros la capacitación!</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FIN DE LA SECCIÓN DEL VIDEO -->
+
+
+
+
+  
+  
+  <script>
+    function paypal(nombre,precio) {
+       //alert("Curso : "+ nombre +"  Precio : " + precio);
+
+       var formulario = document.getElementById('paypal_form');
+
+       var nombre_curso = document.getElementById("paypal_form").elements["item_name"];
+       var precio_curso = document.getElementById("paypal_form").elements["amount"];
+       
+       nombre_curso.value = nombre;
+       precio_curso.value = precio;
+
+    }
+    </script>
+    <!-- Modal -->
+<div class="modal fade"  id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" >
+        <div class="modal-header" >
+          <h5 class="modal-title"  id="exampleModalLongTitle">Aviso de privacidad</h5>
+          <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="overflow-y: auto;
+        max-height: calc(100vh - 300px);">
+        <p align="justify">
+            ¿Quiénes somos?<br/>Itlearning, mejor conocido como Itlearning , con domicilio en calle Sonora No. 300, colonia Vista Hermosa, ciudad Cuernavaca, municipio o delegación Cuernavaca, c.p. 62000, en la entidad de Morelos, país México , y portal de internet http://itlearning.lat/ , es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:<br/>
+            ¿Para qué fines utilizaremos sus datos personales?<br/> De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias que no son necesarias para el servicio solicitado, pero que nos permiten y facilitan brindarle una mejor atención :<br/>-Guardar su información personal para la confirmación del pago<br/> -Guardar su información personal para la posibles devoluciones
+            En caso de que no desee que sus datos personales sean tratados para estos fines secundarios, desde este momento usted nos puede comunicar lo anterior a través del siguiente mecanismo:<br/>-Cancelar la compra<br/>
+            La negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos los servicios y productos que solicita o contrata con nosotros.<br/>
+            ¿Dónde puedo consultar el aviso de privacidad integral?<br/>Para conocer mayor información sobre los términos y condiciones en que serán tratados sus datos personales, como los terceros con quienes compartimos su información personal y la forma en que podrá ejercer sus derechos ARCO, puede consultar el aviso de privacidad integral en:<br/> Vinculo electronico
+         
+            
+        </p>
+           
+      
+        </div>
+        <div class="modal-footer" style="justify-content: center;" > 
+          <button type="button" style="cursor:pointer;" class="btn btn-secondary"  data-dismiss="modal" alt="Botón para cancelar compra">Cancelar</button>
+          <!--<button type="button" class="btn btn-primary">Comprar</button>-->
+
+
+          <form id="paypal_form"  action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="osiel781@gmail.com">
+            <input type="hidden" name="lc" value="MX">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="currency_code" value="MXN">
+            <input type="hidden" name="item_name" value="">
+            <input type="hidden" name="amount" value="">
+            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+            <button type="submit" style="cursor:pointer" src="{% static 'images/icon.png' %}" class="btn btn-success"  border="0" name="submit" alt="Continuar compra">Continuar compra</button>
+            <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            
+            </form>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+                                            <!-- FIN DEL MODAL -->
+<!-- SECCIÓN DE "OFERTA DE CAPACITACIÓN" -->
+    
+<section class="pb_section" data-section="oferta" id="seccion-oferta">
+    <div class="container" >
+        <div class="row"  >
+            <div class="col-lg-12 col-md-12 col-sm-12"id="subseccion-oferta">
+                <div class="row justify-content-md-center text-center mb-5">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="mt-0 barra-blanca light font-weight-normal" style="color: white; font: bold;">Oferta de Capacitación</h2>
+                    </div>
+
+                <div class="table-responsive" style="color: white; font:bold;">
+                        <table class="table">
+                                <thead>
+                                     
+                                        <tr>
+                                          <th class="text-center" scope="col">Curso</th>
+                                          <th class="text-center" scope="col">Certificadora</th>
+                                          <th class="text-center" scope="col">Descripcion</th>
+                                          <th class="text-center" scope="col">Fecha</th>
+                                          <th class="text-center" scope="col">Precio</th>
+                                          <th class="text-center" scope="col"></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                            {% for cursos in cursos_it %} 
+                                        <tr>
+                             
+                                          <td class="text-left"> <a href="https://www.google.com/" target="_blank"  style="cursor:pointer; color: white">   {{cursos.nombre_curso}} </a> 
+                                           
+                                           </td>
+                                          <td class="text-left">{{cursos.nombre_certificadora}}</td>
+                                          <td class="text-left">{{cursos.descripcion}}</td>
+                                          <td class="text-left">{{cursos.fecha_curso}}</td>
+                                          <td class="text-left">${{cursos.precio}}</td>
+                                        <td class="text-center">  <button type="button" style="cursor:pointer;" class="btn btn-light" data-toggle="modal" onclick="paypal('{{cursos.nombre_curso}}', '{{cursos.precio}}' )" data-target="#exampleModalCenter">
+                                            Comprar
+                                          </button> </td>
+
+                                               
+                                            <!-- Button trigger modal -->
+
+                                            <!--
+                                            <td>
+                                                    <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                                        <input type="hidden" name="cmd" value="_xclick">
+                                                        <input type="hidden" name="business" value="osiel781@gmail.com">
+                                                        <input type="hidden" name="lc" value="MX">
+                                                        <input type="hidden" name="button_subtype" value="services">
+                                                        <input type="hidden" name="currency_code" value="MXN">
+                                                        <input type="hidden" name="item_name" value="{{cursos.nombre_curso}}">
+                                                        <input type="hidden" name="amount" value="{{cursos.precio}}">
+                                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+                                                        <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                                                        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                                                        </form>
+                                                        
+                                        </td>-->
+                                               <!-- Modal -->
+                                              
+
+                                          {% endfor %}
+                                        </tr>
+
+                                      </tbody>
+                        </table>
+                      </div> 
+ 
+                  <!-- AQUI VA LA TABLA-->
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+       
+</section>
+<!-- FIN DE LA SECCIÓN DE "OFERTA DE CAPACITACIÓN" -->
+
+<!-- SECCIÓN DE "PARTNERS" -->
+<section class="pb_section pb_bg-half" data-section="partners" id="seccion-partners">
+    <div class="container"  id="subseccion-partners">
+        <div class="row justify-content-md-center text-center mb-5">
+            <div class="col-lg-12">
+                <h2 class="mt-0 barra-negra light font-weight-normal" style="color: black;">Partners</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center text-center mb-5">
+
+            <div class="col-lg-1 col-md-1 col-sm-1">
+
+            </div>
+
+            <div class="partners col-lg-4 col-md-4 col-sm-12 text-center" onclick="popUpKanban();">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <img style="padding-top: 20px;" class="img-fluid" src="{% static 'images/Kanban Management.png' %}">
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <img style="padding-top: 20px;" class="img-fluid" width="250px" src="{% static 'images/Kanban Coaching.png' %}">
+                </div>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2">
+
+            </div>
+
+            <div class="partners col-lg-4 col-md-4 col-sm-12 mb-5 text-center" onclick="popUpScrum();">
+
+                <img style="padding-top: 85px" class="img-fluid" width="300px" src="{% static 'images/scrumstudy.png' %}">
+
+            </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1">
+
+            </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1">
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-5 text-center">
+
+                <img style="padding-top: 55px" class="img-fluid" width="250px" src="{% static 'images/Management.png' %}">
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2">
+
+            </div>
+
+            <div style="padding-top: 50px;" class="col-lg-4 col-md-4 col-sm-12 mb-5 text-center">
+
+                <img width="250px" class="rounded-circle img-fluid" src="{% static 'images/Design.png' %}">
+
+            </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1">
+
+            </div>
+
+            <div style="padding-top: 40px;" class="partnersShow" id="partner_kanban">
+
+                <p style="color: white; text-align: justify;">Kanban es una metodología que promueve el trabajo organizado enfocado en la innovación permitiendo tener un mejor rendimiento y una buena comunicación a través de la mejora continua al tener una visualización de las actividades que se están realizando para obtener el resultado esperado.</p>
+
+            </div>
+
+            <div style="padding-top: 50px;" class="partnersShow" id="partner_scrum">
+
+                <p style="color: white; text-align: justify;">Scrum es un marco de trabajo ágil que se ha consolidado durante los últimos años y cuyo uso se ha extendido demostrando una mayor eficiencia a comparación de los métodos tradicionales, cambiando los conceptos de trabajo, beneficiando a las empresas que buscan tener mejores resultados.</p>
+
+            </div>
+
+            <div style="padding-top: 65px;" class="partnersShow">
+
+                <p style="color: white;  text-align: justify;">Management 3.0 ha innovado totalmente los conceptos de liderazgo, gestión e innovación en las empresas, generando equipos de trabajo motivados, empoderados y auto-organizados; cambiando así la forma en que éstos se relacionan. Management 3.0 implica crear un ambiente de trabajo con gente competente, productiva y teniendo como prioridad que éstas se sientan felices en su lugar de trabajo.</p>
+
+            </div>
+
+            <div style="padding-top: 65px;" class="partnersShow">
+
+                <p style="color: white;  text-align: justify;">Design Thinking está revolucionando el mundo del diseño de productos, servicios y resolución de problemas. A través de sus procesos se desarrolla confianza creativa a nivel personal y laboral, con el propósito de crear productos, servicios y/o esquemas de innovación a través de la perspectiva de pensamiento de diseño.</p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+<!-- FIN DE LA SECCIÓN DE "PARTNERS" -->
+
+<!-- SECCIÓN DE "ENFOQUE" -->
+<section class="pb_section pb_section_v1 section-about1" data-section="enfoque" id="seccion-enfoque">
+    <div class="row">
+        <div class="container">
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-12">
+                    <div align="center" class="enfoque" id="subseccion-enfoque">
+
+                        <!-- "ENFOQUE" -->
+                        <div class="col-lg-12">
+                            <h2 class="mt-0 barra-blanca light font-weight-normal" style="color: white">Enfoque</h2>
+                        </div>
+                        <div align="center" style=" position: relative; height: 100%; width: 100%">
+                            <p id="gris">
+                            ITLearning es una empresa con un nuevo modelo de gestión e innovación que conoce las necesidades de estar preparados y certificados para poder competir en un entorno laboral flexible y cambiante. Es por eso que ofrecemos cursos, talleres y certificaciones en metodologías y marcos de trabajo ágiles impartidos por profesionales certificados y especializados.</br></br>
+
+                            En ITLearning nos apasiona trabajar con personas proactivas y que buscan retos como forma de vida, es por eso que: “TÚ PONES LA ACTITUD Y NOSOTROS LA CAPACITACIÓN”.
+                        </p>
+                    </div>                        
+                </div>
+            </div>
+            &nbsp;
+
+            <div class="col-lg-12">
+                <div class="clientes" id="subseccion-clientes">
+
+                    <!-- "CLIENTES" -->
+                    <div class="col-lg-12">
+                        <h2 class="mt-0 barra-blanca light font-weight-normal" style="color: white">Clientes</h2>
+                    </div>
+                    <div class="row col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 my_repr_col" style="background-color: white; height: 100px;">
+                            <img style="height: 80px;" class="img-fluid" src="{% static 'images/Tec_Monterrey.png' %}">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 my_repr_col" style="background-color: white; height: 100px">
+                            <img style="height: 80px" class="img-fluid" src="{% static 'images/INEEL.png' %}">
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 my_repr_col" style="background-color: white; height: 100px">
+                            <img style="height: 80px" class="img-fluid" src="{% static 'images/INEA.png' %}">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 my_repr_col" style="background-color: white; height: 100px">
+                            <img style="height: 80px" class="img-fluid" src="{% static 'images/INAI.png' %}">
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+
+                        </div>                      
+                        <div class="col-lg-4 col-md-4 col-sm-4 my_repr_col" style="background-color: white; height: 100px">
+                            <img style="height: 80px" class="img-fluid" src={% static "images/CFE.png" %} ">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 my_repr_col" style="background-color: white; height: 100px">
+                            <img style="height: 80px" class="img-fluid" src="{% static 'images/Quaker_State.png' %}">
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- FIN DE LA SECCIÓN DE "ENFOQUE" -->
+
+<!-- SECCIÓN DE "TESTIMONIOS" -->
+<section class="pb_section pb_testimonial_v1" data-section="testimonios" id="seccion-testimonios">
+    <div class="container" id="subseccion-testimonios">
+        <div class="row justify-content-md-center text-center mb-5">
+            <div class="col-lg-12">
+                <h2 class="mt-0 barra-negra light font-weight-normal" style="color: black">Testimonios</h2>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-sm-12 mb-5">
+                <div class="single-item-no-arrow pb_slide_v1">
+                    <div>
+                        <div class="media">
+                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="{% static 'images/Vicente.jpg' %}" alt="Generic placeholder image">
+                            <div class="media-body pl-md-5 pl-sm-0">
+                                <blockquote>
+                                    <p>"El curso de SCRUM Developer en ITLearning es totalmente ad hoc con el tema ágil y flexible, con una fuerte labor colaborativa entre instructores y participantes. Una muy recomendable experiencia de preparación para lograr la certificación".
+                                    </p>
+                                    <p class="pb_author">
+                                        <cite>Vicente Valera Aldana</cite>
+                                        <div class="pb_author"> : : &nbsp; Investigador de la Gerencia de Inteligencia e Información Tecnológica en el Instituto Nacional de Electricidad y Energías Limpias (INEEL).
+                                        </div>
+                                    </p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="media">
+                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="{% static 'images/Hiriam.jpg' %}" alt="Generic placeholder image">
+                            <div class="media-body pl-md-5 pl-sm-0">
+                                <blockquote>
+                                    <p>"El aprendizaje de Management 3.0 ha reforzado y mejorado mis habilidades para colaborar en equipos de alto de desempeño, alcanzando los resultados con una nueva forma de gestión ágil, y compartida. La experiencia con ITLearning y los asistentes a los cursos siempre ha sido de gran colaboración, participación activa y aprendizaje. Los recomiendo ampliamente".
+                                    </p>
+                                    <p class="pb_author">
+                                        <cite>Hiriam Eduardo Pérez Vidal</cite>
+                                        <div class="pb_author"> : : &nbsp; Subdirector de Sistemas en el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)
+                                        </div>
+                                    </p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="media">
+                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="{% static 'images/Alan.jpg' %}" alt="Generic placeholder image">
+                            <div class="media-body pl-md-5 pl-sm-0">
+                                <blockquote>
+                                    <p>"Tomé el curso de Scrum Master con ITLearning en 2016. Gracias a la certificación, pude negociar un mejor salario y dos meses después de empezar, conseguí que me promovieran. En cada entrevista que he tenido me preguntan sobre mi certificación como Scrum Master, aunque sea para un rol diferente. Actualmente, la certificación me sigue ayudando para crecer el equipo en México de una empresa estadounidense".
+                                    </p>
+                                    <p class="pb_author">
+                                        <cite>Alan Hegewisch Taylor</cite>
+                                        <div class="pb_author"> : : &nbsp; UI Engineer en IdentityMind Global
+                                        </div>
+                                    </p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FIN DE LA SECCIÓN DE "TESTIMONIOS" -->
+
+<!-- SECCIÓN DE "CONTACTO" -->
+<section class="pb_section cover-my bg6 cover-bg-cyan cover-bg-opacity-6" data-section="contacto" id="seccion-contacto">
+    <div class="container">
+        <div class="row justify-content-md-center text-center mb-5">
+            <div class="col-lg-12">
+                <h2 class="mt-0 barra-blanca light font-weight-normal" style="color: white">Contacto</h2>
+            </div>
+        </div>
+        
+           
+     
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form method="post" onSubmit="alert('Su mensaje ha sido enviado con exito en breve nos contactaremos con usted.');" action="{% url 'index' %}">
+                    {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md">
+                                <div style="color: white" class="form-group">
+                                    <label for="name">Nombre:</label>
+                                    <input type="text"  name="nombre" placeholder="nombre" class="form-control p-3 rounded-0" >
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div style="color: white" class="form-group">
+                                    <label for="email">Correo:</label>
+                                    <input type="text" class="form-control p-3 rounded-0"  name="correo" placeholder="correo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="color: white" class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea cols="30" rows="10" class="form-control p-3 rounded-0" name="message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" style="cursor:pointer;"  class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Enviar">
+                        </div> </br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="nuestra_experiencia">
+
+                    <!-- "NUESTRA EXPERIENCIA" -->
+                <div class="row justify-content-md-center text-center mb-5">
+                    <div class="col-lg-12">
+                        <h2 class="mt-0 barra-blanca light font-weight-normal" style="color: white">Nuestra Experiencia</h2>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <img class="img-fluid" src= "{% static "images/mapa.png" %}">
+                        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.7601560411294!2d-99.21738158553448!3d18.94200748716494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfc3b6061de3%3A0x98ca58fab7945083!2sSonora+300%2C+zona+1%2C+Extension+Vista+Hermosa%2C+62295+Cuernavaca%2C+Mor.!5e0!3m2!1sen!2smx!4v1530119944194" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FIN DE LA SECCIÓN DE "CONTACTO" -->
+
+<!-- SECCIÓN DEL PIE DE PÁGINA -->
+<footer id="seccion-pie" data-section="pie">
+    <div class="container"></br>
+        <div class="row">
+            <div class="footer_direccion col-lg-3 col-md-6 col-sm-12">
+                <img src="{% static 'images/direccion.png' %}" width="40px">
+                <div class="footer_direccion_informacion" style="margin-top: -52px">Sonora No. 300</div>
+                <div class="footer_direccion_informacion">Col. Vista Hermosa</div>
+                <div class="footer_direccion_informacion">Cuernavaca, Morelos.</div>
+            </div>
+
+            <div class="footer_mail col-lg-3 col-md-6 col-sm-12">
+                <img src="{% static 'images/mail.png' %}" width="50px">
+                <div class="footer_mail_informacion">info@itlearning.lat</div>               
+            </div>
+
+            <div class="footer_telefono col-lg-3 col-md-6 col-sm-12">
+                <img src="{% static 'images/telefono.png' %}" width="35px">
+                <div class="footer_telefono_informacion" style="margin-top: -45px"> + 52 (55) 85 26 1012 </div>
+                <div class="footer_telefono_informacion" style="margin-top: -8px"> + 52 (777) 176 3415 </div>       
+            </div>
+
+            <div class="footer_facebook col-lg-3 col-md-6 col-sm-12">
+                <button class="facebook" id="facebook" onclick="redireccionarFacebook();">
+                    <img width="45px" src="{% static 'images/facebook.png' %}">
+                    <div class="footer_facebook_informacion">@itlearningcapacitaciones</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright" align="center" style="color: white;">
+        <div class="container"> </br>
+        © 2018 ITLearning. Todos los derechos reservados. </br>
+    </div>
+</div>
+</footer>
+<!-- FIN DE LA SECCIÓN DEL PIE DE PÁGINA -->
+
+<!-- "DERECHOS RESERVADOS" -->
+<div id="pb_loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#FDA04F"/>
+    </svg>
+</div>
+</body>
+</html>
